@@ -1,8 +1,7 @@
 const express = require('express');
 const _ = express.Router();
+const Auth = require("./api")
 
-_.get("/login", (req, res)=> {
-    res.send("Hello this is login")
-})
+_.use('/api/v1', Auth);
 
 module.exports = _;
